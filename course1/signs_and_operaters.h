@@ -47,12 +47,23 @@ void test_logic_op(){
 
 template<class T>
 void display_var_bits(T var){
+    // 获取一个类型的长度
     int Bs = sizeof(T);
+    // 强制转换一块内存地址的解码方式
     unsigned int* var_ptr = (unsigned int*)((void*)(&var));
+    // 设置一个mask掩码值来每一次捕获低8位的二进制：
+    // 0x00000000 00000000 00000000 11111111 = 
+    // 0x11111111 = 
+    // 255 = 
+    // (256-1) = 
+    // ((1<<8)-1)
     unsigned char filter1 = 255;
+    // 设置另外一个掩码值来每一次捕获低1位的二进制：0x00000001
     unsigned char filter = 1;
+    // 取内容运算获得var_ptr指向的地址，按照int类型解码获得的值
     unsigned int tmp_var = *var_ptr, b;
     cout<<"bit string of "<<var<<" is: ";
+    // 按照8位一个字节，依次打印每一个位的值（1或者0）
     char* bit_str = new char[Bs*8+1];
     for (int i=0;i<Bs*8;i++){
         b = tmp_var & filter;

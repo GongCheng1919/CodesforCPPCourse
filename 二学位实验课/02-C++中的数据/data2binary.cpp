@@ -19,7 +19,12 @@ std::string floatToBinary(float num) {
 int main() {
     int a;
     float b;
-    std::cin>>a>>b;
+    std::cin>>a;
+    if (std::cin.fail())
+        std::cin.clear();
+    std::cin>>b;
+    if (std::cin.fail())
+        std::cin.clear();
     std::cout << intToBinary(a) << std::endl;
     std::cout << floatToBinary(b) << std::endl;
     return 0;
