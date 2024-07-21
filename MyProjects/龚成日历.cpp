@@ -18,6 +18,11 @@ int main()
 	{
 		cout<<"请输入您要的年份：";
 	    cin>>year;
+		if(year<=0)
+		{
+            cout << "输入错误，请重新输入年份！" << endl;
+            continue;
+        }
 	    if (year%100==0)
 		{
 			if (year%400==0) {
