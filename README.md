@@ -1,37 +1,24 @@
 # CPP-Course-Demo
 
 #### 介绍
-这是一个C++课程对应的代码库，请参照课堂内容对照学习
+本项目是一个C++课程对应的教学库和代码库，用于参照课堂内容进行C++语言的对照学习。
+本项目和本课程的最终目标是帮助新入门的同学可以从头开始逐步地学习C++的基础内容，因此本项目的题目和教学都会是最基础最通俗的，不追求很高的技巧，只追求踏实的基础。
 
-#### 软件架构
-软件架构说明
+#### 内容结构
+本项目的目录结构为：（列出项目的目录树，并且每一个目录后面添加目录说明）
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 使用方法
+本项目基于GNU G++ (表明版本) 编译，可以通过XX运行测试程序
+每一门课程下的每一课都有对应的说明和测试程序，请按照（什么样的步骤）运行测试
+（这里需要详细写明每一个课程和每一个运行案例应该如何使用，你们自己多跑几遍，跑完了把使用方法写在这里） 
 
 #### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+著名本课程的参与人有哪些，各自都做了哪些工作
 
 
-#### 特技
+#### ToDo
+当前已经完成了哪些步骤，离最终的目标还需要完成哪些步骤
+[ ] 完成实验课2-2的第一课
+[x] 完成实验课2-2的第一课
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### License
