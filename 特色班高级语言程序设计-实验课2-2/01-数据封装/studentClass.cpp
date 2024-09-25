@@ -32,8 +32,8 @@ class Student {
     void Display() {
         int sum = SumGra();
         int ave = AveGra();
-        cout << m_id << " " << m_name << " " << m_math << " " << m_eng << " " << m_cs << " ";
-        cout << sum << " " << ave;
+        cout << m_id << " " << m_name << " " << m_math << " " << m_eng << " " << m_cs << " "<<endl;
+        cout <<"Total: "<< sum << ", Average: " << ave<<endl;
     }
 };
 
