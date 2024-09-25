@@ -1,36 +1,22 @@
 # CPP-Course-Demo
 
-#### Description
-这是一个C++课程对应的代码库，请参照课堂内容对照学习
+## Introduction
+This project is a teaching library and code repository corresponding to a C++ course, used for comparative learning of the C++ language by referring to classroom content.
+The ultimate goal of this project and this course is to help new beginners gradually learn the basic content of C++ from scratch. Therefore, the topics and teaching of this project will be the most basic and popular. It does not pursue high skills but only solid foundations.
 
-#### Software Architecture
-Software architecture description
+## Content Structure
+The directory structure of this project is: (List the directory tree of the project, and add a directory description after each directory).
 
-#### Installation
+## Usage
+This project is compiled based on GNU G++ (indicate the version) and can run test programs through XX.
+Each lesson under each course has corresponding instructions and test programs. Please run the tests according to (what steps).
+(Here, it is necessary to write in detail how each course and each running case should be used. Run it several times by yourself and write the usage method here after running.)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## Contribution
+Who are the participants of this course and what work have they done respectively?
 
-#### Instructions
+## ToDo
+What steps have been completed currently, and what steps still need to be completed to reach the final goal?
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- [ ] Complete the first lesson of experimental course 2-2.
+- [x] Complete the first lesson of experimental course 2-2.
