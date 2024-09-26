@@ -8,8 +8,11 @@ all: $(EXE)
 %.exe:%.cpp 
 	$(CC) $< $(CFLAGS) -o $@
 
-test:
-	cmd /c "echo Testing gemm.exe & echo 3 4 5 d | gemm.exe"
+test:  
+	echo "Testing gemm" && echo "3 4 5 d" | ./gemm  
+	echo "Testing Float" | ./Float  
+	echo "Testing FloatX" | ./FloatX  
+	echo "Testing Tensor" | ./Tensor 
 
 clean:
 	del /F /Q $(EXE)
