@@ -2,9 +2,7 @@ CC = g++
 CFLAGS = -Wall -Wextra -O3
 
 # 设置源文件和可执行文件的变量
-# SRC = dynamicArray.cpp
-# EXE = dynamicArray.exe
-SRC = Matrix.cpp Tensor.cpp
+SRC = Matrix.cpp
 EXE = $(SRC:.cpp=.exe)
 
 all: $(EXE)
@@ -13,23 +11,10 @@ all: $(EXE)
 %.exe: %.cpp
 	$(CC) $< $(CFLAGS) -o $@
 
-# 为每个可执行文件生成测试目标
-# test: $(EXE)
-# 	@for exe in $(EXE); do \
-# 		echo "Testing $$exe"; \
-# 		./$$exe <<-EOF \
-# 		10 1 2 3 4 5 6 7 8 9 10 \
-# 		EOF; \
-# 	done
-
-# test:
-# 	@ printf "10 1 2 3 4 5 6 7 8 9 10\n10 1 2 3 4 5 6 7 8 9 10" | ./$(EXE)
-# 	@ printf "9 1 2 3 4 5 6 7 8 9 \n10 1 2 3 4 5 6 7 8 9 10" | ./$(EXE)
-
-test:
-	@test_exe=$(word 1, $(EXE)); echo "Testing $$test_exe"; printf "3 3" | ./$$test_exe 
-	@printf "\n" 
-	@test_exe=$(word 2, $(EXE)); echo "Testing $$test_exe"; printf "" | ./$$test_exe
+# 测试目标
+test: $(EXE)
+	@test_exe=$(word 1, $(EXE)); echo "Testing $$test_exe"; printf "3 3\n" | ./$$test_exe
+	@printf "\n"
 
 clean:
 	rm -f $(EXE)
