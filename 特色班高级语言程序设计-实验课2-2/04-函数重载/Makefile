@@ -1,6 +1,6 @@
 CC = g++
 CFLAGS = -Wall -Wextra -O3
-SRC = gemm.cpp
+SRC = $(wildcard *.cpp)
 EXE = $(SRC:.cpp=.exe)
 
 all: $(EXE)
