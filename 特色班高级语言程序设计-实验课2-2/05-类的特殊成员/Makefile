@@ -9,8 +9,6 @@ all: $(EXE)
 %: %.o  
 	$(CC) $< -o $@ 
 
-%.exe:%.cpp 
-	$(CC) $< $(CFLAGS) -o $@
 
 test: $(EXE)  
 	echo "Testing database" && (echo 3; echo name link i; echo name zelda u; echo location hyrule i) | ./database  
