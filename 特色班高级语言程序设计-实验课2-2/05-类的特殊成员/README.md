@@ -90,6 +90,7 @@ int readme() const { return me++; }
 int readme() const { return((CC* )this)->me++; }
 ```
 就不会出错。因为把 this 指针的类型强迫转换为 CC* 型。
+
 ---
 # 实验题目
 
