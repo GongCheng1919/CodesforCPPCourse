@@ -141,17 +141,18 @@ public:
     // Print function
     void printTensor() {
         int rowSize, columnSize, matrixSize, numMatrices;
+
         if (dims >= 2) {
             rowSize = shape[dims - 2];
             columnSize = shape[dims - 1];
-            matrixSize = rowSize * columnSize;
-            numMatrices = size / matrixSize;
         }
-        else if (dims < 2) {
+        else if (dims == 1) {
             rowSize = shape[dims - 1];
             columnSize = 1;
-            matrixSize = rowSize * columnSize;
-            numMatrices = size / matrixSize;
+        }
+        else if (dims == 0) {
+            rowSize = 1;
+            columnSize = 1;
         }
 
         for (int i = 0; i < numMatrices; ++i) {
