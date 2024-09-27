@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/652e8671-be3d-47ac-867a-4fbb4ebad37e)# 课程内容
+# 课程内容
 ## 引用
 引用变量是一个别名，也就是说，它是某个已存在变量的另一个名字。一旦把引用初始化为某个变量，就可以使用该引用名称或变量名称来指向变量。[菜鸟教程 引用](https://www.runoob.com/cplusplus/cpp-references.html)
 
