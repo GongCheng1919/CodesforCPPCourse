@@ -173,7 +173,6 @@ Circle类应该有一个名为radius的成员变量，Rectangle类应该有两�
 
 输出：几何图形的面积和周长
 ## Functions，AutoGrad——虚函数：实现自动求导算子基类Function
-[实现原理]([特色班高级语言程序设计-实验课2-2/09-多态性与虚函数/AutoGrad.md](https://github.com/GongCheng1919/CodesforCPPCourse/blob/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-2/09-%E5%A4%9A%E6%80%81%E6%80%A7%E4%B8%8E%E8%99%9A%E5%87%BD%E6%95%B0/AutoGrad.md))
 
 为了实现这个功能，你可能需要完成：
 
