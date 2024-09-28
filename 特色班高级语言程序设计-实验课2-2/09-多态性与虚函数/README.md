@@ -78,5 +78,137 @@ int main()
 - 抽象基类中的虚函数使基类作为这一组类的抽象，**基类成为它的若干派生类的对外接口**。通过抽象基类，再“加上”各派生类的特有成员以及对基类中那一纯虚函数的具体实现，可以构成一个具体的实用类型。
 - 许多引入虚函数的程序，把基类的虚函数说明为纯虚函数，从而使基类成为一种抽象基类，可以更自然地反映实际应用问题中对象之间的关系。
 - **如果一个抽象基类的派生类中没有定义基类中的纯虚函数**，而只是继承了基类的纯虚函数，则**这个派生类还是一个抽象基类**，其中仍包含着继承而来的那个纯虚函数。
-# 实验题目
 
+以下是纯虚函数的一个例子，是特色班期末考试笔试的一道题
+题目的大致要求：建立一个缓冲区抽象基类，再建立两个类继承该基类，其中一个类在缓冲区内容满后将内容输出到屏幕上，另一个类在缓冲区满后将内容输出到文件里
+```
+#include<iostream>
+#include<sstream>
+#include<fstream>
+using namespace std;
+class Buffer
+{
+protected:
+	int capacity=20;//缓冲区内最大容量
+	stringstream buffer;//缓冲区
+	virtual void clean_output() = 0;//将缓冲区清空并输出到对应位置的虚函数
+public:
+	void updata(stringstream& input);//更新缓冲区的函数
+};
+class fileoutput : public Buffer
+{
+private:
+	string filename;//文件名
+	virtual void clean_output() override;
+public:
+	fileoutput(string file) :filename(file) {}
+};
+class screenoutput :public Buffer
+{
+private:
+	virtual void clean_output() override;
+};
+void Buffer::updata(stringstream& input)//负责将外部数据读入缓冲区，如果缓冲区内数据超过最大容量则按照不同类的对应方式输出
+{
+	string str;
+	while (getline(input, str))
+	{
+		buffer << str;
+		buffer << endl;
+	}
+	if (buffer.str().size() > capacity) {
+		clean_output(); buffer.str(""); buffer.clear();
+	}
+	input.str("");
+}
+void fileoutput::clean_output()//将缓冲区清空并且把缓冲区的内容读入某个文件中
+{
+	fstream fst(filename,std::fstream::out) ;
+	if (fst.is_open())
+	{
+		string str;
+
+		while (getline(buffer, str))
+		{
+			fst << str;
+			cout << str;
+		}
+	}
+	fst.close();
+}
+void screenoutput::clean_output()//将缓冲区清空并且将缓冲区的内容打在屏幕上
+{
+	string str;
+	while (getline(buffer, str))
+	{
+		cout << str << endl;
+	}
+}
+int main()
+{
+	string str;
+	getline(cin, str);
+	cin.ignore();
+	fileoutput testfile("test.txt");
+	stringstream ss(str);
+	testfile.updata(ss);
+	ss.str(str);
+	screenoutput testscreen;
+	testscreen.updata(ss);
+	return 0;
+}
+```
+在该代码中，两个类通过this指针在updata函数里分别调用两类自己的clean_output函数，很多初学者在学习虚函数和多态性的时候认为该知识点难以理解，老师给的例子也十分抽象，但通俗来理解，多态性实现了各个类调用同名的，有类似作用的，从基类继承来的虚函数。意思也就是说，即使在基类的某个函数中写道调用基类中的某个虚函数，但若是在派生类中继承并重写了该函数，则使用派生类的该函数。基类便相当于一个平台，将不同派生类的共性封装起来，而多态性则保证了不同派生类在共性的行为里保持了自己的个性。继承同一基类的各个派生类必然有一些相似的操作，然而这些操作并不完全相同，此时便可通过虚函数来实现各个派生类对于这些操作自己的定义
+# 实验题目
+## calc_shape——虚函数：计算几何图形的面积和周长
+在一个二维平面上，有许多不同的几何形状，包括圆形、矩形和三角形。每种形状都有自己的面积和周长。你的任务是创建一个形状类（Shape）和三个派生类（Circle，Rectangle，Triangle），并实现两个虚函数 calculateArea() 和 calculatePerimeter()，这两个函数会返回形状的面积和周长。
+
+要求：
+
+Shape类应该有两个虚函数calculateArea和calculatePerimeter，这两个函数应该返回double类型的值。
+Circle，Rectangle，Triangle类应该从Shape类派生，并且应该重写calculateArea和calculatePerimeter函数。
+Circle类应该有一个名为radius的成员变量，Rectangle类应该有两个名为width和height的成员变量，Triangle类应该有三个名为a，b，c的成员变量，分别代表三边的长度。
+每个类应该有一个接受相应成员变量作为参数的构造函数，该构造函数应该设置相应的成员变量的值。
+输入： 第一个参数为Circle，Rectangle，Triangle中的一个字符串，接下来多个浮点数，表示对应类型的参数
+
+输出：几何图形的面积和周长
+## Functions，AutoGrad——虚函数：实现自动求导算子基类Function
+[实现原理](特色班高级语言程序设计-实验课2-2/09-多态性与虚函数/AutoGrad.md)
+
+为了实现这个功能，你可能需要完成：
+
+1. 首先你需要实现一个Tensor类，用于存储张量的数据。为了测试简单，请你用随机数生成器来生成数据填充，随机算法为std::mt19937，种子为0，类型float，范围0.0到1.0
+2. 基于Tensor类，你需要实现一个GradTensor类用于Function的前向传播和累积反向传播中的梯度。GradTensor为带梯度的Tensor，其相比于普通的Tensor类多了一个Tensor类型的grad成员用于存储和更新梯度。
+3. 设计一个可以自动求导的Function基类，其包含forward和backward两组虚函数，分别用于计算函数值和梯度。并且包含一个ctx的成员变量，其是一个vector对象，用于存储GradTensor对象。
+4. 实现由Function派生出的Add类和Mul类，分别用于实现GradTensor加法和对位乘法，以及对这两个参数的自动求导。
+
+输入和输出：
+
+输入三个整数[m,n,k]，然后调用Mul和Add类的forward函数用于计算$A*A+A$的结果，你需要分别列出每一步的计算结果。
+
+然后通过Mul和Add类的backward函数，计算$A*A+A$对$A$的梯度。
+
+请参考BP算法和链式求导法则进行反向求导，假设最后层对输出的梯度也为$A$.
+
+记住，如果对$A$有多个梯度，需要将其累加。
+
+输入输出请参考示例，数值类型为float类型。
+
+## test_virtual2 ——虚函数：测试虚函数表
+请构建包含3个虚函数（用func1，func2，func3）的基类（用符号‘A’表示），以及base类的3个派生类（符号‘B’,'C','D'表示），要求均实现了基类的3个虚函数。
+
+请打印出派生类对象的虚函数调用地址条目在虚函数表中的相对地址（相对于第一个虚函数的首地址）。
+
+输入：一个字符（A，B，C，D）和一个整数（1，2，3）
+
+输出：输出对应类的实例化对象对应的虚函数调用地址条目在虚函数表中的相对地址，以及该虚函数的调用结果。
+## Animal ——虚函数：不同动物的吼声
+题目描述
+在一个动物园里，有许多不同种类的动物，包括狮子、老虎和熊。每种动物都有一个名字，而且每种动物都有自己的叫声。你的任务是创建一个动物类（Animal）和三个派生类（Lion，Tiger，Bear），并实现一个虚函数 makeSound()，该函数会打印出动物的叫声。
+
+要求：
+
+Animal类应该有一个名为name的成员变量和一个名为makeSound的虚函数。
+Lion，Tiger，Bear类应该从Animal类派生，并且应该重写makeSound函数。
+Lion的makeSound函数应该打印"Roar"，Tiger的makeSound函数应该打印"Growl"，Bear的makeSound函数应该打印"Grr".
+每个类应该有一个接受名字作为参数的构造函数，该构造函数应该设置name成员变量的值。
