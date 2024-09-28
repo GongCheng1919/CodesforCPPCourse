@@ -8,11 +8,8 @@ all: $(EXE)
 %.exe:%.cpp 
 	$(CC) $< $(CFLAGS) -o $@
 
-test:
-	cmd /c "echo Testing gemm.exe & echo 3 4 5 d | gemm.exe"
-	cmd /c "echo Testing Float.exe | Float.exe"
-	cmd /c "echo Testing FloatX.exe | FloatX.exe"
-	cmd /c "echo Testing Tensor.exe | Tensor.exe"
+test:  
+	echo "Testing SmartPointer" && echo "10 1 2 3 4 5 6 7 8 9 10" | ./SmartPointer  
 
 clean:
 	del /F /Q $(EXE)
