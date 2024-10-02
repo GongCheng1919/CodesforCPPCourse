@@ -11,8 +11,8 @@
 如果类需要更复杂的初始化，则需要实现自定义拷贝构造函数。拷贝构造函数 **只含有一个形参**，而且其形参为本类对象的引用。
 
 ```cpp
-	Box(Box& other); // Avoid if possible--allows modification of other.
-	Box(const Box& other);
+    Box(Box& other); // Avoid if possible--allows modification of other.
+    Box(const Box& other);
 	
     // Additional parameters OK if they have default values
     Box(Box& other, int i = 42, string label = "Box");
