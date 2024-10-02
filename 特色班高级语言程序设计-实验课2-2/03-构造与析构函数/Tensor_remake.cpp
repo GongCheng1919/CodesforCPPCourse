@@ -155,6 +155,9 @@ public:
             columnSize = 1;
         }
 
+        matrixSize = rowSize * columnSize;
+        numMatrices = size / matrixSize;
+
         for (int i = 0; i < numMatrices; ++i) {
             for (int j = 0; j < matrixSize; ++j) {
                 std::cout << data[i * matrixSize + j];
