@@ -60,5 +60,8 @@ void stack<complex>::showtop(){
 ```
 
 # 实验题目
+#### addformat - 任意基本类型的数相加
+请用模板函数实现任意类型的数据相加。两个数的类型可以不一样，这时候需要按照从低往高的顺序转换，比如char和int的求和应该都使用int。对于整型类型，均按照整型加法，浮点类型均按照浮点加法。
 
+#### [LogSoftmax](https://github.com/GongCheng1919/CodesforCPPCourse/blob/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-2/10-%E6%A8%A1%E6%9D%BF/%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE%20-%20logsoftmax.pdf)
  
