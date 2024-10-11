@@ -19,6 +19,6 @@ int main()
 	cout << "ave:" << ave << endl;
 	if (ave > 60) cout << "ifpass:pass" ;
 	else cout << "ifpass:fail";
-	if (extraclass) cout <<endl<< "²Î¼Ó¶îÍâ¿Î³Ì£¬ÒÑ¼ÓÎå·Ö";
+	if (extraclass) cout <<endl<< "å‚åŠ é¢å¤–è¯¾ç¨‹ï¼Œå·²åŠ äº”åˆ†";
 	return 0;
 }
