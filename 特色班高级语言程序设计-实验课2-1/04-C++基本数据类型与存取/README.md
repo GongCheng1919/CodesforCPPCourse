@@ -286,6 +286,8 @@ return 0;
 ```
 ## 课后习题
 - 字符串操作——stringoperator.cpp，字符串操作.md
+- 字符串操作（oj）——string.cpp，字符串操作（oj）.md
+- 类型转换对程序的影响（oj版）——change.cpp，类型转换对程序的影响（oj版）.md
 - 探究不同数据类型的大小——testsize.cpp，探究不同数据类型的大小.md
 - 数据类型的探究——testdataclass.cpp，数据类型的探究.md
 - 类型转换对程序的影响——testchange.cpp，类型转换对程序的影响.md
