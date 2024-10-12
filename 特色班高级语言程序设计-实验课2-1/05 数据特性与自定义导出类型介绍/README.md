@@ -1,7 +1,7 @@
 # 数据特性与自定义导出类型介绍
 ## 常量与变量
 
-C++程序中的数据可分为 [[#常量]]（constant）与[[#变量]]（variable）两大类。在程序执行过 程中其值不能被改变的数据称为常量，其值可以改变的数据称为变量
+C++程序中的数据可分为 [常量](https://github.com/GongCheng1919/CodesforCPPCourse/blob/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/05%20%E6%95%B0%E6%8D%AE%E7%89%B9%E6%80%A7%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%BC%E5%87%BA%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/README.md#%E5%8F%98%E9%87%8F)（constant）与[[#变量]]（variable）两大类。在程序执行过 程中其值不能被改变的数据称为常量，其值可以改变的数据称为变量
 ***
 #### 变量
 
