@@ -430,7 +430,7 @@ a.public_func();
 ```cpp
 class A{ 
 	public: void func(); 
-} 
+};
 
 void A::func(){}
 ```
