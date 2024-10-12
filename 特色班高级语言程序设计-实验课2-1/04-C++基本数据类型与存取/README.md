@@ -132,13 +132,164 @@ int main(){
   - long：长的，加长字长。
   - signed：有符号的，值的范围包括正负值。
   - unsigned：无符号的，值的范围只包括正值。
-
-
-
-
-
-
-
+---
+![派生类型及关键](https://img-blog.csdnimg.cn/20190110115017898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjE2Nzc1OQ==,size_16,color_FFFFFF,t_70)
+---
+#### 数据类型的内存量
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+  cout<<"sizeof(int)="<<sizeof(int)<<endl;
+  cout<<"sizeof(float)="<<sizeof(float)<<endl;
+  cout<<"sizeof(double)="<<sizeof(double)<<endl;
+  cout<<"sizeof(wchar_t)="<<sizeof(wchar_t)<<endl;
+  cout<<"sizeof(char)="<<sizeof(char)<<endl;
+  cout<<"sizeof(bool)="<<sizeof(bool)<<endl;
+  return 0;
+}
+```
+run
+```
+sizeof(int)=4
+sizeof(float)=4
+sizeof(double)=8
+sizeof(wchar_t)=2
+sizeof(char)=1
+sizeof(bool)=1
+```
+---
+## 数据大小与类型转换
+#### sizeof
+-  sizeof是C++中的一个不可重载运算符，通常用于动态内存分配，其在底层具有重要作用，不可重载；
+- sizeof接受类型参数或者变量，返回类型或者变量占用的内存大小（以字节byte为单位）；
+- sizeof和取地址运算结合，可以获取任意变量的数据存储区域（起始地址+数据长度），可以实现许多底层数据操作。
+```
+int arr[5] = {1, 2, 3, 4, 5};
+std::cout << "Size of int: " << sizeof(int) << " bytes" << std::endl;
+std::cout << "Size of double: " << sizeof(double) << " bytes" << std::endl;
+std::cout << "Size of char: " << sizeof(char) << " bytes" << std::endl;
+std::cout << "Size of arr: " << sizeof(arr) << " bytes" << std::endl;
+```
+#### 不同类型的大小
+- 基本数据类型
+  - 整型和浮点
+- 基本数据类型的派生类型
+  - short/long/signed/unsigned
+- 导出类型
+  - 数组
+  - 指针
+  - 引用
+- 自定义数据类型：
+  - 枚举
+  - 结构
+  - 联合
+  - 类
+ ---
+ #### 强制类型转换
+ - C语言中支持不同类型间的强制类型转换：
+ - 这种显式的强制的类型转换可能会进行数据的重新编码，取决于编译器支持，并不一定是安全的，可能出现错误。比如整型10到浮点10.0的转换。
+- 另一种更直接的强制类型转换是仅进行指针类型转换：
+```
+int a = 10;
+float b = a;
+double c = (double)a;
+```
+- 另一种更直接的强制类型转换是仅进行指针类型转换：
+-  这种转换不会改变数据的编码方式，仅仅修改数据的类型，因此需要称需要自己决定是否转换，以及转换后的结果，一般而言是不安全和不推荐的，但是可以实现更基础更底层的操作。
+```
+int a = 10;
+float b = *(float*) &a;
+double c = *(double*) &a;
+```
+---
+#### 安全的类型转换
+- C++中的显式类型转换：
+  - static_cast & dynamic_cast
+  - const_cast
+  - reinterpret_cast
+- static_cast：
+  - 用于进行常见的类型转换，如数值类型之间的转换、继承关系中的类型转换等。
+  - 在**编译**时进行类型检查，不会进行运行时的类型检查。
+  - 在转换时，程序员需要确保转换是合法和安全的。
+- dynamic_cast:
+  - 常用于在继承关系中进行类型转换，用于检查在运行时是否能够安全地将指针或引用转换为目标类型。
+  - 会进行**运行时**的类型检查，如果类型转换不合法，会返回异常。
+  - 只能用于具有虚函数的类之间的转换，用于安全地在派生类和基类之间进行转换。
+- const_cast：
+  - 通常用于消除函数参数的 const 修饰符，以便在函数中修改参数的值。
+- reinterpret_cast:
+  - 不改变指针和内存位置，但是将重新解释当前指针指向的内存区域的读取方式。
+  - 类似于强制的指针类型转换。
+  - 对于不同类型之间的转换，没有任何类型检查或安全性保障
+  ---
+#### C++ 基本数据类型与存取
+```
+#include <iostream>
+#include <cstring>
+int main() {
+// 定义并使用不同的基本数据类型
+int integerVar = 42;
+float floatVar = 3.14f;
+double doubleVar = 3.141592653589793;
+char charVar = 'A';
+std::string stringVar = "Hello, C++!";
+// 观察不同数据类型在内存中的大小和起始地址
+std::cout << "Size of int: " << sizeof(integerVar) << " bytes. Address: " << &integerVar << std::endl;
+std::cout << "Size of float: " << sizeof(floatVar) << " bytes. Address: " << &floatVar << std::endl;
+std::cout << "Size of double: " << sizeof(doubleVar) << " bytes. Address: " << &doubleVar << std::endl;
+std::cout << "Size of char: " << sizeof(charVar) << " byte. Address: " << (void*)&charVar << std::endl;
+std::cout << "Size of string: " << sizeof(stringVar) << " bytes. Address: " << &stringVar << std::endl;
+return 0;
+}
+```
+---
+```
+#include <iostream>
+#include<cstring>
+int main() {
+// 定义并使用不同的基本数据类型
+int integerVar = 42;
+float floatVar = 3.14f;
+double doubleVar = 3.141592653589793;
+char charVar = 'A';
+std::string stringVar = "Hello, C++!";
+// 实现对字符串型数据的操作
+std::string newString = stringVar + " How are you?";
+std::cout << "New string: " << newString << std::endl;
+// char*类型字符串操作
+char* charPtr = "Old char* string";
+char newCharPtr[50];
+strcpy(newCharPtr, charPtr);
+strcat(newCharPtr, " Added text.");
+std::cout << "New char* string: " << newCharPtr << std::endl;
+return 0;
+}
+```
+---
+```
+#include <iostream>
+#include <cstring>
+int main() {
+// 定义并使用不同的基本数据类型
+int integerVar = 42;
+float floatVar = 3.14f;
+double doubleVar = 3.141592653589793;
+char charVar = 'A';
+std::string stringVar = "Hello, C++!";
+// 分析数据的解码方式（类型转换）对程序结果的影响
+int intFromDouble = static_cast<int>(doubleVar);
+std::cout << "Double " << doubleVar << " converted to int: " << intFromDouble << std::endl;
+return 0;
+}
+```
+## 课后习题
+- 字符串操作——stringoperator.cpp，字符串操作.md
+- 探究不同数据类型的大小——testsize.cpp，探究不同数据类型的大小.md
+- 数据类型的探究——testdataclass.cpp，数据类型的探究.md
+- 类型转换对程序的影响——testchange.cpp，类型转换对程序的影响.md
+  
 
 
 
