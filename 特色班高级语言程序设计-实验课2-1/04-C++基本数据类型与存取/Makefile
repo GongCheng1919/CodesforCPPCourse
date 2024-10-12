@@ -12,6 +12,8 @@ test:
 	echo "Testing testsize" && echo "*" | ./testsize  
 	echo "Testing testdataclass" && echo "xiaoming 9 62.0 32.0 22.0 0"| ./testdataclass 
 	echo "Testing testchange" && echo "9e+17" | ./testchange
+	echo "Testing change" && echo "9e+17" | ./change
+	echo "Testing string" && echo "crazy Thursday vivo 50" | ./string
 	echo "Testing stringoperator" && echo "39137707 bing" && echo "crazy Thursday vivo 50"&& echo "4 10 3"  | ./stringoperator 
   
 clean:  
