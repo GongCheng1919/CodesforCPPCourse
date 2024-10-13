@@ -64,19 +64,19 @@ for(int i = 0; i < 5; i++){
 控制语句可用来改变或打破程序中按语句的先后次序顺序执行的规律，分类如下
 
 控制语句
-	条件控制语句
-		分支语句
-			[if 分支语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#if-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5)
-			[switch 分支语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#switch-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5)
-		循环语句
-			[for 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#for-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5)
-			[while 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#while-%E8%AF%AD%E5%8F%A5)
-			[do...while 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#do-while-%E8%AF%AD%E5%8F%A5)
-	无条件控制语句
-		break 语句
-		continue 语句
-		return 语句
-		goto 语句
+- 条件控制语句
+	- 分支语句
+		- [if 分支语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#if-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5)
+		- [switch 分支语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#switch-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5)
+	- 循环语句
+		- [for 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#for-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5)
+		- [while 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#while-%E8%AF%AD%E5%8F%A5)
+		- [do...while 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#do-while-%E8%AF%AD%E5%8F%A5)
+- 无条件控制语句
+	- break 语句
+	- continue 语句
+	- return 语句
+	- goto 语句
 
 #### _`if`_ 分支语句
 
