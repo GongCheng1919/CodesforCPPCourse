@@ -170,7 +170,7 @@ _`case`_ 标号仅起标记的作用
 
 _`for`_ 语句是 C++程序中最常用的、功能最强的循环语句，其执行顺序如图
 
-![[for.png]]
+![https://github.com/GongCheng1919/CodesforCPPCourse/blob/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C%2B%2B%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/for.png]
 
 其格式为： 
 
