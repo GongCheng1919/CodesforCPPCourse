@@ -66,12 +66,12 @@ for(int i = 0; i < 5; i++){
 控制语句
 	条件控制语句
 		分支语句
-			[if 分支语句]
-			[switch 分支语句]
+			[if 分支语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#if-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5)
+			[switch 分支语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#switch-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5)
 		循环语句
-			[for 语句]
-			[while 语句]
-			[do...while 语句]
+			[for 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#for-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5)
+			[while 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#while-%E8%AF%AD%E5%8F%A5)
+			[do...while 语句](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#do-while-%E8%AF%AD%E5%8F%A5)
 	无条件控制语句
 		break 语句
 		continue 语句
@@ -95,7 +95,7 @@ if( 表达式 <E_1> ) <语句 S_1>
     else <语句 S_m+1>
 ```
 
-- 表达式 E：在 _`if`_ 后面，用（）括起来，该表达式应为 _`bool`_ 型的[逻辑表达式]， _`int`_ 型、_`long`_ 型、_`char`_ 型以及 _`enum`_ 型表达式都是合法的，其值等于 0 为假， 非 0 为真
+- 表达式 E：在 _`if`_ 后面，用（）括起来，该表达式应为 _`bool`_ 型的[逻辑表达式](https://github.com/GongCheng1919/CodesforCPPCourse/tree/master/%E7%89%B9%E8%89%B2%E7%8F%AD%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E5%AE%9E%E9%AA%8C%E8%AF%BE2-1/07-C++%E6%99%AE%E9%80%9A%E8%AF%AD%E5%8F%A5%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6#%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F)， _`int`_ 型、_`long`_ 型、_`char`_ 型以及 _`enum`_ 型表达式都是合法的，其值等于 0 为假， 非 0 为真
 - 语句 S：可以是任何类型的语句，也可以是块语句。语句S1、语句S2 同 S
 - 关键字 _`else`_：出现在第 2 类 _`if`_ 语句中，它表示当表达式 E 取假值（0）时 跳过语句 S1，执行 S2
 
@@ -229,4 +229,4 @@ do <语句 S> while (<表达式 E>)；
 - 语句 S：为循环体。 
 - 表达式 E：判定循环是否继续，其值为 真（非 0 整数）时返回执行循环体 S，否则跳出。 
 
-do-while 语句与 while 语句的主要区别是，它的循环体至少被执行一次；而 while 语句首先判断条件，可能一次也不执行就 跳出。（do-while也不是for循环的一种特例）
+_`do-while`_ 语句与 _`while`_ 语句的主要区别是，它的循环体至少被执行一次；而 _`while`_ 语句首先判断条件，可能一次也不执行就 跳出。（_`do-while`_ 也不是 _`for`_ 循环的一种特例）
