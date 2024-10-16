@@ -39,7 +39,7 @@ int main()
 		if (p[i] != 0)
 		{
 			cout << p[i];
-			if (i != n - 1) cout << " ";
+			cout << " ";
 		}
 	}
 	return 0;
