@@ -248,7 +248,7 @@ void test_int_mod()
 ---
 ![sizeof](../image/sizeof.png)
 ---
-![newanddelete](../image.newanddelete.png)
+![newanddelete](../image/newanddelete.png)
 ---
 - 数组下标运算符：<数组名> [<下标表达式>]
 - 限定运算符：<类名>::<类成员名>
