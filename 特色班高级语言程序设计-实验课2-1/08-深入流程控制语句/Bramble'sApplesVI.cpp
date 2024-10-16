@@ -9,6 +9,7 @@ int main()
 	if (max == 1 || max == 0) {
 		cout << "0"; return 0;
 	}
+	if(max<0){cout<<"error";return 0;}
 	do
 	{
 		int ifsushu = 1;
