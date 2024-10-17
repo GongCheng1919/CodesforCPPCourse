@@ -8,6 +8,7 @@ int main()
 	int n;
 	while (cin >> n) {
 		cout << n << "个苹果,真香"<<endl;
+		cout.clear();
 	}
 	cout << "俺滴苹果！还俺苹果！";
 	return 0;
