@@ -388,9 +388,180 @@ Stack size after pop: 3
 ---
 ![showqueue](../image/showqueue.png)
 ---
-
-
-
+- 队列定义和初始化：
+```
+struct Queue {
+int* data;
+int capacity;
+int front;
+int rear;
+};
+// 初始化队列
+void initialize(Queue
+& queue) {
+queue.data = new int[INITIAL_CAPACITY];
+queue.capacity = INITIAL_CAPACITY;
+queue.front = 
+-
+1
+;
+queue.rear = 
+-
+1
+;
+}
+```
+- 入队操作
+```
+void enqueue(Queue
+& queue, int value) {
+if
+(queue.rear == queue.capacity
+-
+1) {
+int newCapacity = queue.capacity * 
+2
+;
+int* newData = new int
+[newCapacity];
+for
+(int
+i = queue.front + 
+1, j = 
+0
+; i <= queue.rear; ++i, ++j) {
+newData[j] = queue.data
+[i];
+}
+delete[] queue.data
+;
+queue.data = newData
+;
+queue.rear = queue.rear
+- queue.front
+-
+1
+;
+queue.front = 
+-
+1
+;
+queue.capacity = newCapacity
+;
+}
+queue.data[++queue.rear] = value;
+}
+```
+- 出队操作
+```
+int dequeue(Queue& queue) {
+if (queue.front == queue.rear) {
+std::cerr << "Queue is empty." << std::endl;
+return -1;
+}
+return queue.data[++queue.front];
+}
+```
+- 获取队列长度
+```
+int size(const Queue& queue) {
+return queue.rear - queue.front;
+}
+```
+- 测试
+---
+![testqueue](../image/testqueue.png)
+---
+#### vector容器
+- vector是 C++ 标准库中的一个动态数组容器，它可以自动管理内存大小，可以在运行时根据需要动态增长或缩小。
+- vector模板类来创建一个 vector 对象。可以创建存储特定类型元素的vector，格式为：
+> vector<数据类型> 名字。
+```
+vector<int> myVector; // 创建一个存储整数的 vector，名字为myVector
+vector<char> myVector; // 创建一个存储字符的 vector，名字为myVector
+vector<string> myVector; // 创建一个存储字符串的 vector，名字为myVector
+```
+- 简单使用案例：
+```
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+vector <int> myVector = { 
+1
+,
+2
+,
+3
+,
+4
+,
+5 };
+for
+(int
+i = 
+0; 
+i < myVector.size(); i++) {
+cout << myVector
+[
+i] << " "
+;
+}
+cout << endl
+;
+return
+0
+;
+}
+```
+- vector容器还可以嵌套实现二维以及高维数组
+```
+int main() {
+const int row = 10, col = 
+5
+;
+int initial_val = 
+3
+;
+vector<vector<int>> myMatrix
+;
+for
+(int
+i = 
+0; 
+i < col; 
+i++) {
+vector<int> myVector
+;
+myVector.resize
+(row,initial_val);
+myMatrix.push_back
+(myVector);
+}
+for
+(int
+i = 
+0; 
+i < myMatrix.size(); i++) {
+for
+(int j = 
+0; j < myMatrix
+[i].size(); j++) {
+cout << myMatrix
+[
+i][j] << " "
+;
+}
+cout << endl
+;
+}
+cout << endl
+;
+return
+0
+;
+}
+```
 
 
 
