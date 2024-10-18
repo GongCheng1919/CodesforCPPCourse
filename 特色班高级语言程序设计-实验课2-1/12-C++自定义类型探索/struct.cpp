@@ -1,7 +1,6 @@
 #include<iostream>
 #include<string>
 #include<cmath>
-#include<fstream>
 using namespace std;
 class student
 {
@@ -24,7 +23,6 @@ public:
 };
 int main()
 {
-	fstream in("test.txt", ios::out);
 	int n;
 	cin >> n;
 	student* p = new student[n];
@@ -32,7 +30,7 @@ int main()
 	{
 		for (int j = i + 1; j < n; j++)
 			if (p[i] == p[j])
-				in << p[i].name << " " << p[j].name << endl;
+				cout << p[i].name << " " << p[j].name << endl;
 	}
 	delete []p;
 	return 0;
