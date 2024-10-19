@@ -2,12 +2,12 @@
 #include<string>
 using namespace std;
 
-// ¶¨ÒåÃ¶¾ÙÀàÐÍ  
+// å®šä¹‰æžšä¸¾ç±»åž‹  
 enum Grade {
     A, B, C, D, F, INVALID
 };
 
-// º¯ÊýÉùÃ÷  
+// å‡½æ•°å£°æ˜Ž  
 Grade getGrade(int score);
 string gradeToString(Grade grade);
 
@@ -26,9 +26,9 @@ int main() {
     return 0;
 }
 
-// º¯Êý¶¨Òå  
+// å‡½æ•°å®šä¹‰  
 Grade getGrade(int score) {
-    // ÊµÏÖ¸Ãº¯Êý  
+    // å®žçŽ°è¯¥å‡½æ•°  
     if (score >= 90 && score <= 100) return A;
     else if (score >= 80 && score < 90) return B;
     else if (score >= 70 && score < 80) return C;
@@ -37,9 +37,9 @@ Grade getGrade(int score) {
     else return INVALID;
 }
 
-// º¯Êý¶¨Òå  
+// å‡½æ•°å®šä¹‰  
 string gradeToString(Grade grade) {
-    // ÊµÏÖ¸Ãº¯Êý  
+    // å®žçŽ°è¯¥å‡½æ•°  
     switch (grade) {
     case A: return "A";
     case B: return "B";
