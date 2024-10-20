@@ -1,48 +1,46 @@
 #include<iostream>
-#include<fstream>
 using namespace std;
-fstream out("test.txt", ios::out);
 template<typename T>
 class stack
 {
 private:
-	T* data;//´æÕ»ÄÚÊı¾İµÄ
-	int capacity;//ÈİÁ¿
-	int size;//Ä¿Ç°ÓĞ¶àÉÙÔªËØ
-	int Expansion = 2;//À©ÈİÏµÊı
+	T* data;//å­˜æ ˆå†…æ•°æ®çš„
+	int capacity;//å®¹é‡
+	int size;//ç›®å‰æœ‰å¤šå°‘å…ƒç´ 
+	int Expansion = 2;//æ‰©å®¹ç³»æ•°
 public:
-	stack()//³õÊ¼»¯Õ»£¬×î³õÓĞ20¸öÔªËØµÄÎ»ÖÃ
+	stack()//åˆå§‹åŒ–æ ˆï¼Œæœ€åˆæœ‰20ä¸ªå…ƒç´ çš„ä½ç½®
 	{
 		capacity = 2;
 		data = new T[2];
 		size = 0;
 	}
-	void pushback(T x);//ÈëÕ»
-	T pop()//³öÕ»
+	void pushback(T x);//å…¥æ ˆ
+	T pop()//å‡ºæ ˆ
 	{
 		return data[--size];
 	}
-	bool empty()//ÅĞ¶ÏÕ»ÊÇ·ñÎª¿Õ
+	bool empty()//åˆ¤æ–­æ ˆæ˜¯å¦ä¸ºç©º
 	{
 		if (size == 0)return true;
 		return false;
 	}
-	T inquire()//²éÑ¯Õ»¶¥ÔªËØ
+	T inquire()//æŸ¥è¯¢æ ˆé¡¶å…ƒç´ 
 	{
 		return data[size - 1];
 	}
-	int getsize()//»ñÈ¡Õ»µÄ³¤¶È
+	int getsize()//è·å–æ ˆçš„é•¿åº¦
 	{
 		return size;
 	}
-	void clear()//Çå¿ÕÕ»
+	void clear()//æ¸…ç©ºæ ˆ
 	{
 		delete[]data;
 		data = new T[20];
 		size = 0;
 		capacity = 20;
 	}
-	~stack()//Îö¹¹
+	~stack()//ææ„
 	{
 		delete[]data;
 	}
@@ -58,8 +56,8 @@ public:
 template<typename T>
 void stack<T>::pushback(T x)
 {
-	if (size + 1 < capacity) data[size++] = x;//ÈôÈëÕ»Ò»¸öÔªËØºóµÄsizeĞ¡ÓÚÈİÁ¿£¬Ö±½ÓÈëÕ»
-	else//Èô´óÓÚ£¬À©Èİºó½«Ô­Êı¾İ¿½±´µ½ĞÂ¿Õ¼ä²¢ÊÍ·ÅÔ­¿Õ¼ä
+	if (size + 1 < capacity) data[size++] = x;//è‹¥å…¥æ ˆä¸€ä¸ªå…ƒç´ åçš„sizeå°äºå®¹é‡ï¼Œç›´æ¥å…¥æ ˆ
+	else//è‹¥å¤§äºï¼Œæ‰©å®¹åå°†åŸæ•°æ®æ‹·è´åˆ°æ–°ç©ºé—´å¹¶é‡Šæ”¾åŸç©ºé—´
 	{
 		capacity *= Expansion;
 		T* temp = new T[capacity];
@@ -70,7 +68,7 @@ void stack<T>::pushback(T x)
 		temp[size++] = x;
 		delete[]data;
 		data = temp;
-		out << "Increase capacity to " << capacity << endl;
+		cout << "Increase capacity to " << capacity << endl;
 	}
 }
 int main()
@@ -87,6 +85,6 @@ int main()
 		if (c == 'i') sta.pushback(temp);
 		else sta.pop();
 	}
-	out << sta;
+	cout << sta;
 	return 0;
 }
