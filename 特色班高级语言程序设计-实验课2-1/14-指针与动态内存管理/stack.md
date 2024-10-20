@@ -1,6 +1,67 @@
 # stack
 
+- 你需要完成下面的stack类，实现栈的pop和pushback函数
+- 第一行输入一个整数n，代表接下来有n组操作
+- 接下来n行每行一个整数和一个操作，i操作代表将整数压入栈中，p操作代表弹出栈顶元素
+```
+class stack
+{
+private:
+	int* data;//存栈内数据的
+	int capacity;//容量
+	int size;//目前有多少元素
+	int Expansion = 2;//扩容系数,若栈内元素的数量大于容量，则将容量扩大到两倍并且将原来的元素全部复制到新空间里
+public:
+	stack()//初始化栈，最初有2个元素的位置
+	{
+		capacity = 2;
+		data = new T[2];
+		size = 0;
+	}
+	void pushback(T x);//入栈
+	int pop()//出栈
+	{
 
+	}
+	bool empty()//判断栈是否为空
+	{
+		if (size == 0)return true;
+		return false;
+	}
+	int inquire()//查询栈顶元素
+	{
+		return data[size - 1];
+	}
+	int getsize()//获取栈的长度
+	{
+		return size;
+	}
+	void clear()//清空栈
+	{
+		delete[]data;
+		data = new int[2];
+		size = 0;
+		capacity = 2;
+	}
+	~stack()//析构
+	{
+		delete[]data;
+	}
+	friend std::ostream& operator<<(std::ostream& os, const stack& sta)
+	{
+		for (int i = 0; i < sta.size; i++)
+		{
+			os << sta.data[i] << " ";
+		}
+		return os;
+	};
+};
+void stack::pushback(int x)
+{
+
+
+}
+```
 
 **样例输入1**
 ```
