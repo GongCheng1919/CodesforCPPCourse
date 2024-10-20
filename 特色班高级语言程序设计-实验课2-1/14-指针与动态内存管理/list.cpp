@@ -1,30 +1,30 @@
 #include<iostream>
 #include<string>
 using namespace std;
-class link//Õ»µÄµ¥Î»
+class link//æ ˆçš„å•ä½
 {
 public:
-	link* next;//Ã¿¸öµ¥Î»¼ÇÂ¼ÏÂÒ»¸öµ¥Î»µÄµØÖ·
-	string data;//Ã¿¸öµ¥Î»¶ÔÓ¦Ò»¸ö¿é
+	link* next;//æ¯ä¸ªå•ä½è®°å½•ä¸‹ä¸€ä¸ªå•ä½çš„åœ°å€
+	string data;//æ¯ä¸ªå•ä½å¯¹åº”ä¸€ä¸ªå—
 	string key;
 	link(string d, string k) :data(d), key(k) { next = nullptr; };
 };
-class stack//Õ»Àà
+class stack//æ ˆç±»
 {
 public:
-	link* head;//Ö¸ÏòÕ»ÄÚµÚÒ»¸öµ¥Î»µÄÖ¸Õë
-	link* curr;//Î²Ö¸Õë
-	void newlink(string key, string data);//´´½¨ĞÂµ¥Î»µÄº¯Êı
-	void deletelink(link* lin);//É¾³ıÄ³¸öµ¥Î»µÄº¯Êı
-	stack()//´´½¨ĞÂµÄÕ»¹¹Ôìº¯Êı
+	link* head;//æŒ‡å‘æ ˆå†…ç¬¬ä¸€ä¸ªå•ä½çš„æŒ‡é’ˆ
+	link* curr;//å°¾æŒ‡é’ˆ
+	void newlink(string key, string data);//åˆ›å»ºæ–°å•ä½çš„å‡½æ•°
+	void deletelink(link* lin);//åˆ é™¤æŸä¸ªå•ä½çš„å‡½æ•°
+	stack()//åˆ›å»ºæ–°çš„æ ˆæ„é€ å‡½æ•°
 	{
-		head = nullptr;//½«Í·Ö¸ÕëÉèÖÃÎª¿Õ
+		head = nullptr;//å°†å¤´æŒ‡é’ˆè®¾ç½®ä¸ºç©º
 		curr = head;
 	}
-	~stack()//Îö¹¹
+	~stack()//ææ„
 	{
 		link* temp = head;
-		while (temp != curr)//µ±Í·Ö¸Õë²»Îª¿ÕÖ¸ÕëÊ±½øĞĞ
+		while (temp != curr)//å½“å¤´æŒ‡é’ˆä¸ä¸ºç©ºæŒ‡é’ˆæ—¶è¿›è¡Œ
 		{
 			link* te;
 			if (temp == nullptr)break;
