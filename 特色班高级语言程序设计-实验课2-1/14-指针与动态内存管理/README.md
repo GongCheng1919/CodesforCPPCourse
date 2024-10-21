@@ -94,7 +94,11 @@ assert(sptr.use_count() == 2); // sptr 和 sptr1 共享资源，引用计数为 
 assert(sptr.use_count() == 1); // sptr1 已经释放
 }
 ```
-
+# 课后习题
+- 亚波人的阴谋——stack.cpp
+- 希卡利的数据库——link.cpp
+- 艾斯的肉联厂——pointerfunction.cpp
+- 诸星团的吉普车——snack.cpp
 
 
 
