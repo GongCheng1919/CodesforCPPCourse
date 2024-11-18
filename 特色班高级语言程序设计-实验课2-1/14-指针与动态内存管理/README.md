@@ -95,10 +95,10 @@ assert(sptr.use_count() == 1); // sptr1 已经释放
 }
 ```
 # 课后习题
-- 亚波人的阴谋——stack.cpp
-- 希卡利的数据库——link.cpp
-- 艾斯的肉联厂——pointerfunction.cpp
-- 诸星团的吉普车——snack.cpp
+- 栈操作——stack.cpp
+- 链表操作——link.cpp
+- 指针奇偶分类——pointerfunction.cpp
+- 蛇形填数——snack.cpp
 
 
 
