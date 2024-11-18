@@ -17,6 +17,6 @@ int main() {
     long long value;
     cin >> key >> value;
     element obj(key, value);
-    cout << obj << endl; // 输出: {key: 42, value: 100}
+    cout << obj << endl;
     return 0;
 }
