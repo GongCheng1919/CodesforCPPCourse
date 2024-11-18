@@ -152,9 +152,9 @@ b3=operator+(b1,b2);
 -  注意，被用户重定义（重载）的运算符，其优先级、运算顺序（结合性）以及运算分量个数都必须与系统中的原运算符相一致，而且不可自创新的运算符。
 ---
 # 课后题目
-- 懒羊羊的数学题——bignumber.cpp
-- 喜羊羊的游戏——gemn.cpp
-- 灰太狼的疑问——testbignumber.cpp
+- 高精度加法——bignumber.cpp
+- 随机矩阵加法——gemn.cpp
+- 重载运算符调用优先级——testbignumber.cpp
 
 
 
