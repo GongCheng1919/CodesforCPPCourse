@@ -564,10 +564,10 @@ return
 ```
 ---
 # 课后题目
-- 小果叮的疑问——union.cpp
-- 天下无贼的任务——enum.cpp
-- 天山果佬的请求——class.cpp
-- 菠萝吹雪的任务——struct.cpp
+- 共用体的特质——union.cpp
+- 枚举——enum.cpp
+- 自定义类型综合应用——class.cpp
+- 结构体旗鼓相当的对手——struct.cpp
 
 
 
